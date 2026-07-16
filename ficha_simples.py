@@ -41,7 +41,10 @@ if pergunta == "n":
 if pergunta == "s":
     while True:
         try:
-            print("voce tem ",pontos_de_atributo," pontos de atributo")
+            if pontos_de_atributo == 0:
+                print("seus pontos de atributo acabaram")
+                break
+            print("===|| FORÇA ||=== \n voce tem ",pontos_de_atributo," pontos de atributo")
             forca = int(input("quanto de força voce deseja investir? "))
             if forca < 0:
                 print("voce não pode investir pontos negativos")
@@ -57,7 +60,10 @@ if pergunta == "s":
 
     while True:
         try:
-            print("voce tem ",pontos_de_atributo," pontos de atributo")
+            if pontos_de_atributo == 0:
+                print("seus pontos de atributo acabaram")
+                break
+            print("===|| DESTREZA ||=== \n voce tem ",pontos_de_atributo," pontos de atributo")
             destreza = int(input("quanto de destreza voce deseja investir? "))
             if destreza < 0:
                 print("voce não pode investir pontos negativos")
@@ -73,7 +79,10 @@ if pergunta == "s":
 
     while True:
         try:
-            print("voce tem ",pontos_de_atributo," pontos de atributo")
+            if pontos_de_atributo == 0:
+                print("seus pontos de atributo acabaram")
+                break
+            print("===|| INTELIGÊNCIA ||=== \n voce tem ",pontos_de_atributo," pontos de atributo")
             inteligencia = int(input("quanto de inteligencia voce deseja investir? "))
             if inteligencia < 0:
                 print("voce não pode investir pontos negativos")
@@ -88,7 +97,10 @@ if pergunta == "s":
             print("voce precisa digitar um numero inteiro")  
 
 
-
+## MODIFICADORES atributos -10 /2
+modificador_forca = (forca - 10) //2 
+modificador_destreza = (destreza - 10) //2 
+modificador_inteligencia = (inteligencia - 10) //2 
 
 
 print("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* \n"
@@ -96,9 +108,9 @@ print("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* \n"
       "NÍVEL: ",nivel_do_jogador, "\n"
       "RAÇA: ",raca, "\n"
       "--ATRIBUTOS--\n"
-      "FORÇA: ",forca, "\n"
-      "DESTREZA: ",destreza, "\n"
-      "INTELIGÊNCIA: ",inteligencia, "\n"
+      "FORÇA: ",forca, " (MODIFICADOR:", modificador_forca, ")\n"
+      "DESTREZA: ",destreza, " (MODIFICADOR:", modificador_destreza, ")\n"
+      "INTELIGÊNCIA: ",inteligencia, " (MODIFICADOR:", modificador_inteligencia, ")\n"
       "PONTOS DE ATRIBUTO: ",pontos_de_atributo,"\n"
       "-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
 )
